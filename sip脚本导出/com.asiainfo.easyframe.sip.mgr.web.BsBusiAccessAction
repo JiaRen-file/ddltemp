@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+
+
+
+
+
+
+<script src="/sip/jsv2/i18n/AILocale.jsp"></script>
+<script language="JavaScript" src="/sip/jsv2/i18n/appframe_js_resource_zh_CN.js"></script>
+<script src="/sip/jsv2/Globe_v2.jsp"></script>
+<script src="/sip/webframe/common/CrmJsResource.jsp?v=16"></script>
+<script language="JavaScript" src="/sip/jsv2/i18n/secframe_js_resource_zh_CN.js"></script>
+<script language="JavaScript" src="/sip/jsv2/i18n/orgmodel_js_resource_zh_CN.js"></script>
+<script language="JavaScript" src="/sip/secframe/common/common.js"/></script>
+<script language="JavaScript" src="/sip/webframe/common/forbidden.js"/></script>
+
+<!-- start ng3.5??·???????js -->
+<script language="JavaScript" src="/sip/webframe/common/newstyle/showMessage.js"/></script>
+<script language="JavaScript" src="/sip/webframe/common/newstyle/tip.js"/></script>
+<script language="JavaScript" src="/sip/webframe/common/newstyle/jquery-1.6.4.min.js"/></script>
+<script language="JavaScript" src="/sip/webframe/common/newstyle/jquery-form.js"/></script>
+<script language="JavaScript" src="/sip/webframe/common/newstyle/newstyle.js"/></script>
+<!-- end ng3.5??·???????js -->
+
+<!-- ???¨×é??±ê×??ù?? -->
+
+<link rel="stylesheet" href="/sip/jsv2/AppFrameCss.css" type="text/css">
+<link rel="stylesheet" href="/sip/webframe/common/AIFrameDBCSS_css.css" type="text/css">
+
+<!-- ???¨×é?????????ù?? -->
+
+<!-- start ng3.5??·???????CSS -->
+<link rel="stylesheet" href="/sip/webframe/common/newstyle/tips.css" type="text/css">
+<link rel="stylesheet" href="/sip/webframe/common/newstyle/window_error.css" type="text/css">
+<link rel="stylesheet" href="/sip/webframe/common/newstyle/add.css" type="text/css">
+<!-- end ng3.5??·???????CSS -->
+
+
+<!-- 
+<script src="/sip/webframe/common/cookie.jsp"></script>
+
+<link id="theme_css_id" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/sip/webframe/common/main.css" type="text/css">
+<script language="javascript" type="text/javascript">
+document.onload = setupFontSize();
+document.onload = setup();
+</script>
+ -->
+
+<!-- ?÷??oneframe????css -->
+<link rel="stylesheet" href="/sip/jsv2/ssk.css" type="text/css"></link>
+
+
+
+<head>
+<title>_LOGIN_OUT</title>
+<script language="javascript" type="text/javascript">
+/**
+ * 获取最高级的window对象
+ */
+function getTopWin()
+{
+  if (window.name == "index")
+  {
+    return window;
+  }
+
+  var w = window;
+  if (window == window.parent)
+  {
+
+    if (window.opener)
+    {
+  w = window.opener;
+  try{
+    while ( w.opener!=null && (w != w.opener))
+    {
+      if (w.name == "index")
+       {
+	 return w;
+       }
+      w = w.opener;
+    }
+  }catch(e){
+    return window;
+  }
+
+    }
+    else
+    {
+       return window;
+    }
+  }
+  else
+  {
+     w = window.parent;
+     while (w.parent && (w != w.parent))
+  {
+    if (w.name == "index")
+     {
+       return w;
+     }
+    w = w.parent;
+  }
+  }
+
+  return w;
+}
+
+
+var _logoutMsg = g_I18NMessage("appframe_core","loginout_msg");
+alert(_logoutMsg);
+var winObj = getTopWin();
+
+if(winObj!=null){
+    winObj.location="/sip/index.jsp";
+}
+</script>
+</head>
+
+<body>
+</body>
+
+</html>

@@ -1,0 +1,2 @@
+denghuizhi-GYCRM_BUG_20170330_0046-001.sql
+新建两个template_code为REX_PHONE_ASYNC_MODIFY和REX_PHONE_ASYNC_MODIFY_USED的BP进程实现号码异步修改功能
